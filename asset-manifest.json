@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/police-brutality-data-visualizations/static/css/main.5f361e03.chunk.css",
-    "main.js": "/police-brutality-data-visualizations/static/js/main.45574c27.chunk.js",
-    "main.js.map": "/police-brutality-data-visualizations/static/js/main.45574c27.chunk.js.map",
+    "main.js": "/police-brutality-data-visualizations/static/js/main.102a6fc6.chunk.js",
+    "main.js.map": "/police-brutality-data-visualizations/static/js/main.102a6fc6.chunk.js.map",
     "runtime-main.js": "/police-brutality-data-visualizations/static/js/runtime-main.c08dc82d.js",
     "runtime-main.js.map": "/police-brutality-data-visualizations/static/js/runtime-main.c08dc82d.js.map",
-    "static/js/2.5ddab4c4.chunk.js": "/police-brutality-data-visualizations/static/js/2.5ddab4c4.chunk.js",
-    "static/js/2.5ddab4c4.chunk.js.map": "/police-brutality-data-visualizations/static/js/2.5ddab4c4.chunk.js.map",
+    "static/js/2.141e5067.chunk.js": "/police-brutality-data-visualizations/static/js/2.141e5067.chunk.js",
+    "static/js/2.141e5067.chunk.js.map": "/police-brutality-data-visualizations/static/js/2.141e5067.chunk.js.map",
     "index.html": "/police-brutality-data-visualizations/index.html",
-    "precache-manifest.368010c72df38cfcc211e70dcf7a12e3.js": "/police-brutality-data-visualizations/precache-manifest.368010c72df38cfcc211e70dcf7a12e3.js",
+    "precache-manifest.f897e6d7439e2eb35351a6c954d51eed.js": "/police-brutality-data-visualizations/precache-manifest.f897e6d7439e2eb35351a6c954d51eed.js",
     "service-worker.js": "/police-brutality-data-visualizations/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/police-brutality-data-visualizations/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.5ddab4c4.chunk.js.LICENSE.txt": "/police-brutality-data-visualizations/static/js/2.5ddab4c4.chunk.js.LICENSE.txt"
+    "static/js/2.141e5067.chunk.js.LICENSE.txt": "/police-brutality-data-visualizations/static/js/2.141e5067.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c08dc82d.js",
-    "static/js/2.5ddab4c4.chunk.js",
+    "static/js/2.141e5067.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.45574c27.chunk.js"
+    "static/js/main.102a6fc6.chunk.js"
   ]
 }
