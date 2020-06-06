@@ -25,6 +25,7 @@ const App: React.FC = () => {
     <div className="App">
       {dateData.length > 0 && (
         <Line
+          height={55}
           data={{
             datasets: [{
               label: 'Incidents',
@@ -47,6 +48,7 @@ const App: React.FC = () => {
       )}
       {locationData.values && (
         <Pie
+          height={100}
           data={{
             datasets: [{
               data: locationData.values,
