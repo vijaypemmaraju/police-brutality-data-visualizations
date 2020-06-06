@@ -25,7 +25,6 @@ const App: React.FC = () => {
     <div className="App">
       {dateData.length > 0 && (
         <Line
-          height={55}
           data={{
             datasets: [{
               label: 'Incidents',
@@ -42,13 +41,11 @@ const App: React.FC = () => {
                 },
               }],
             },
-            // maintainAspectRatio: true,
           }}
         />
       )}
       {locationData.values && (
         <Pie
-          height={100}
           data={{
             datasets: [{
               data: locationData.values,
@@ -58,7 +55,6 @@ const App: React.FC = () => {
                 alpha: 0.5,
               }),
             }],
-            // These labels appear in the legend and in the tooltips when hovering different arcs
             labels: locationData.locations,
           }}
           options={{
