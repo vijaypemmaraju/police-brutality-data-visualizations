@@ -9,7 +9,7 @@ import fetchData from './fetchData';
 import aggregateByDate from './aggregateByDate';
 import { Point, LocationData } from './types';
 import aggregateByLocation from './aggregateByLocation';
-
+import isMobile from './isMobile';
 
 const App: React.FC = () => {
   const [tab, setTab] = useState('date');
@@ -70,6 +70,7 @@ const App: React.FC = () => {
           options={{
             type: 'doughnut',
             cutoutPercentage: 25,
+            ...(isMobile() && { legend: false }),
           }}
         />
       )}
