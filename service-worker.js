@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/police-brutality-data-visualizations/precache-manifest.de191a334ce76bae855f36387803e900.js"
+  "/police-brutality-data-visualizations/precache-manifest.a9b6be21b51262a9dd2702cf373cd532.js"
 );
 
 self.addEventListener('message', (event) => {
