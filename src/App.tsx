@@ -1,55 +1,35 @@
 import React, { useEffect, useState } from 'react';
-import { Line } from 'react-chartjs-2';
+import { Line, Pie } from 'react-chartjs-2';
 import './App.css';
+import randomColor from 'randomcolor';
+import fetchData from './fetchData';
+import aggregateByDate from './aggregateByDate';
+import { Point, LocationData } from './types';
+import aggregateByLocation from './aggregateByLocation';
 
-type DataType = {
-  links: string[],
-  state: string;
-  edit_at: string;
-  city: string;
-  name: string;
-  date: string;
-  date_text: string;
-}
-
-type Point = {
-  x: Date;
-  y: number;
-};
 
 const App: React.FC = () => {
-  const [data, setData] = useState<Point[]>([]);
+  const [dateData, setDateData] = useState<Point[]>([]);
+  const [locationData, setLocationData] = useState<LocationData>({} as LocationData);
+
   useEffect(() => {
     (async () => {
-      const response = await fetch('https://raw.githubusercontent.com/2020PB/police-brutality/data_build/all-locations.json');
-      const json: { data: DataType[] } = await response.json();
-      const transformedData = json.data.reduce((agg, current) => {
-        if (!current.date) {
-          return agg;
-        }
-        const date = new Date(current.date);
-        const existing = agg.find((point) => point.x.getTime() === date.getTime());
-        if (existing) {
-          existing.y += 1;
-        } else {
-          agg.push({ x: date, y: 1 });
-        }
-        return agg;
-      }, [] as Point[]);
-      setData(transformedData.map((point) => {
-        point.x.setHours(0, 0, 0);
-        return point;
-      }).sort((point1, point2) => point2.x.getTime() - point1.x.getTime()));
+      const jsonData = await fetchData();
+
+      setDateData(aggregateByDate(jsonData));
+      setLocationData(aggregateByLocation(jsonData));
     })();
   }, []);
+
   return (
     <div className="App">
-      {data.length > 0 && (
+      {dateData.length > 0 && (
         <Line
           data={{
             datasets: [{
               label: 'Incidents',
-              data,
+              data: dateData,
+              backgroundColor: randomColor({ hue: 'red' }),
             }],
           }}
           options={{
@@ -61,7 +41,27 @@ const App: React.FC = () => {
                 },
               }],
             },
-            maintainAspectRatio: true,
+            // maintainAspectRatio: true,
+          }}
+        />
+      )}
+      {locationData.values && (
+        <Pie
+          data={{
+            datasets: [{
+              data: locationData.values,
+              backgroundColor: randomColor({
+                count: locationData.locations.length,
+                hue: 'red',
+                alpha: 0.5,
+              }),
+            }],
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: locationData.locations,
+          }}
+          options={{
+            type: 'doughnut',
+            cutoutPercentage: 25,
           }}
         />
       )}

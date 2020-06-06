@@ -13,5 +13,6 @@ module.exports = {
     'camelcase': 'off',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
+    'no-param-reassign': 'off',
   }
 };
