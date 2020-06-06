@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "73d5beec9640af1dc552cb103411bd5f",
+    "revision": "2c242e69d5c9b5cf2b14a4b54f4994e6",
     "url": "/police-brutality-data-visualizations/index.html"
   },
   {
-    "revision": "b6fd18cf3b2782ed634f",
+    "revision": "d6ec9a42c25e998bf8f7",
     "url": "/police-brutality-data-visualizations/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "982ac8c0786282c854fc",
-    "url": "/police-brutality-data-visualizations/static/js/2.141e5067.chunk.js"
+    "revision": "53596461c530ddc15682",
+    "url": "/police-brutality-data-visualizations/static/js/2.9e949628.chunk.js"
   },
   {
     "revision": "44e39e61fb6a0450f7c8014318774752",
-    "url": "/police-brutality-data-visualizations/static/js/2.141e5067.chunk.js.LICENSE.txt"
+    "url": "/police-brutality-data-visualizations/static/js/2.9e949628.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b6fd18cf3b2782ed634f",
-    "url": "/police-brutality-data-visualizations/static/js/main.102a6fc6.chunk.js"
+    "revision": "d6ec9a42c25e998bf8f7",
+    "url": "/police-brutality-data-visualizations/static/js/main.e889dcc3.chunk.js"
   },
   {
     "revision": "74556d1dc82c87063296",
